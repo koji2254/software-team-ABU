@@ -1,0 +1,5 @@
+node_modules/
+upload/
+*.json
+routes/
+server.js
