@@ -1,5 +1,5 @@
 node_modules/
 upload/
 *.json
-route/
+routes/
 server.js
