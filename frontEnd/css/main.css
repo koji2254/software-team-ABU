@@ -1,0 +1,189 @@
+/* @font-face {
+   font-family: 'DMSans';
+   src: url('../DM_Sans/static/DMSans-Black.ttf') format('truetype');
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'DM Sans', 'sans-serif';
+}
+
+:root {
+   --dark-blue:#1e3a8a;
+   --darker-blue:#172554;
+   --light-blue:#2563eb;
+   --lighter-blue:#3b82f6;
+   --bg-color:#f5f5f5;
+   --bg-white:#fafafa;
+}
+
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background:var(--bg-color);
+}
+
+.display-flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main-layout {
+   width: 100%;
+   height: 100%;
+}
+
+.container {
+   width: 80%;
+   margin: auto;
+}
+
+.hero-icons {
+   width: 20px;
+   /* display: inline-flex; */
+}
+
+.heading {
+   width: 100%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.compEng-logo {
+   width: 150px;
+   display: flex;
+   justify-content: center;
+}
+
+.compEng-title {
+   color: var(--darker-blue);
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 30px;
+
+}
+
+/* Recognition Body */
+.recognition-body {
+   display: flex;
+   margin: 5px 0 5px 0;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.camera-boxes {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.camera-box {
+   margin: 10px;
+   border: 1px solid var(--darker-blue);
+   border-radius: 10px;
+   width: 250px;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+}
+
+.camera-status {
+   /* display: flex;
+   flex-direction: column; */
+   text-align: center;
+}
+
+.camera-status p{
+   color: var(--lighter-blue);
+}
+
+/* Bottom - - - -  Section */
+.footer {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+}
+
+.cta-section {
+   display: flex;
+   margin: auto;
+   gap: 10px;
+}
+
+.btn-default {
+   padding: 5px 8px;
+   border-radius: 3px;
+   border: 1px solid #cacfd6;
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+}
+
+
+.btn-default:hover {
+   background: #dedede;
+}
+
+/* Bottom - - - -  Section */
+
+#camera-container {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#video-feed {
+   width: 100%;
+   max-width: 400px;
+   height: auto;
+   transform: scaleX('-1');
+}
+
+#capture-btn {
+   padding: 10px 20px;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+#captured-image-container {
+   display: none;
+   object-fit: cover;
+   text-align: center;
+   width: 80%;
+   padding: 10px;
+}
+
+#captured-image {
+   width: 100%;
+   object-fit: contain;
+   object-position: center;
+   height: auto;
+}
+
+@media(max-width:550px) {
+   .compEng-title {
+      font-size: 20px;
+   }
+
+   .camera-box {
+      width: 150px;
+      height: 200px;
+   }
+
+   .camera-boxes {
+      /* flex-direction: column; */
+   }
+}
