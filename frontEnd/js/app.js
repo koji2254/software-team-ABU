@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
          // Generate a random number between 1000000000 and 9999999999
          return Math.floor(Math.random() * (9999999999 - 1000000000 + 1)) + 1000000000;
      };
-  
  
     // Function to turn on the camera
     function turnOnCamera() {
@@ -36,38 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
  
-    // Function to capture image
- 
- //    function captureImage() {
- //        const canvas = document.createElement('canvas');
- //        canvas.width = video.videoWidth;
- //        canvas.height = video.videoHeight;
- 
- //       const ctx = canvas.getContext('2d');
- 
- //       // Draw the video frame onto the canvas
- //       ctx.save();
- //       ctx.scale(-1, 1); // Flip horizontally
- //       ctx.drawImage(video, -canvas.width, 0, canvas.width, canvas.height);
- //       ctx.restore();
-   
- //        const imageDataURL = canvas.toDataURL('image/jpeg');
- 
- //        // Display the captured image
- //        capturedImage.src = imageDataURL;
- 
- //        const formData = new FormData()
- //        const timeStamp = new Date().toISOString() 
-        
- //        formData.append('imageFile', imageDataURL)
- //        formData.append('timeStamp', timeStamp)
- 
- //     //    console.log(formData)
- //        sendImageToBackend(imageDataURL);
- //    }
- 
-    // Send image data to the backend
-    
     function captureImage() {
      const canvas = document.createElement('canvas');
      canvas.width = video.videoWidth;
@@ -101,10 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
      formData.append('file', imageFile);
      formData.append('id', timeStamp);
  
-     // formData.forEach((index, item) => {
-     //     console.log(`${item}:${index}` )
-     // })
- 
      sendImageToBackend(formData);
  }
  
@@ -122,22 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const sendImageToBackend = async(formData) => {
         try {      
-             let nums = {
-                 one: 'one',
-                 two: 'TWO TWO'
-             }
- 
-         //    const response = await fetch('http://localhost:5500/api/upload', {
-         //        method: 'POST',
-         //        headers: {
-         //             'Accept' : 'Application/json',
-         //             // 'Content-Type': 'multipart/form-data'
-         //        },
-         //        body: JSON.stringify(nums)
-         //    });
-         //     const data = await response.json();
-         //     console.log(data)
-     
+    
              const config = {
                  headers: {
                      'Content-Type': 'multipart/form-data'
